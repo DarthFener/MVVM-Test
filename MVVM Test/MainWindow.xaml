@@ -13,7 +13,7 @@
         </Grid.ColumnDefinitions>
         <StackPanel Grid.ColumnSpan="2">
             <TextBlock Text="Cognome"/>
-            <ComboBox x:Name="cmbPersone" x:FieldModifier="private" Width="120" Margin="8,0" />
+            <ComboBox x:Name="cmbPersone" x:FieldModifier="private" Width="120" Margin="336,0" />
             <Button Click="Button_Click">salutami</Button>
         </StackPanel>
         <StackPanel Orientation="Horizontal" Margin="0,63,16,-47" Grid.ColumnSpan="2">
