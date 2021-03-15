@@ -1,0 +1,23 @@
+﻿<Window x:Class="MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:MVVM_Test"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="101*"/>
+            <ColumnDefinition Width="31*"/>
+        </Grid.ColumnDefinitions>
+        <StackPanel Grid.ColumnSpan="2">
+            <TextBlock Text="Cognome"/>
+            <ComboBox x:Name="cmbPersone" x:FieldModifier="private" Width="120" Margin="8,0" />
+            <Button Click="Button_Click">salutami</Button>
+        </StackPanel>
+        <StackPanel Orientation="Horizontal" Margin="0,63,16,-47" Grid.ColumnSpan="2">
+            <TextBlock x:Name="txtSaluto" x:FieldModifier="private" />
+        </StackPanel>
+    </Grid>
+</Window>
