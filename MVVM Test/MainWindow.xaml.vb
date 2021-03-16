@@ -1,14 +1,13 @@
 ﻿Class MainWindow
-    Private personeService As IPersoneService = Nothing
-    Public Sub New(ByVal ps As IPersoneService)
+
+    Public Sub New(ByVal vm As MainWindowViewModel)
 
         ' La chiamata è richiesta dalla finestra di progettazione.
         InitializeComponent()
 
         ' Aggiungere le eventuali istruzioni di inizializzazione dopo la chiamata a InitializeComponent().
-        personeService = ps
-        cmbPersone.ItemsSource = personeService.Persone
-        cmbPersone.DisplayMemberPath = "Cognome"
+        DataContext = vm
+
     End Sub
     Private Sub Window_Loaded(sender As Object, e As RoutedEventArgs)
 
@@ -20,9 +19,10 @@
 
     Private Sub salutaMi()
 
-        Dim persona As Persona = DirectCast(cmbPersone.SelectedItem, Persona)
-            txtSaluto.Text = $"Ciao {persona.Nome} {persona.Cognome} "
-
+        '   Dim persona As Persona = DirectCast(cmbPersone.SelectedItem, Persona)
+        ' txtSaluto.Text = $"Ciao {persona.Nome} {persona.Cognome} "
+        Dim x = DirectCast(DataContext, MainWindowViewModel)
+        x.Saluta()
 
     End Sub
 End Class

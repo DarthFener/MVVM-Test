@@ -13,11 +13,14 @@
         </Grid.ColumnDefinitions>
         <StackPanel Grid.ColumnSpan="2">
             <TextBlock Text="Cognome"/>
-            <ComboBox x:Name="cmbPersone" x:FieldModifier="private" Width="120" Margin="336,0" />
+            <ComboBox x:Name="cmbPersone" x:FieldModifier="private" Width="120" Margin="336,0"
+                      ItemsSource="{Binding Path=Persone}" DisplayMemberPath="Cognome"
+                      SelectedItem="{Binding Path=PersonaSelezionata}"/>
             <Button Click="Button_Click">salutami</Button>
         </StackPanel>
         <StackPanel Orientation="Horizontal" Margin="0,63,16,-47" Grid.ColumnSpan="2">
-            <TextBlock x:Name="txtSaluto" x:FieldModifier="private" />
+            <TextBlock x:Name="txtSaluto" x:FieldModifier="private"
+                       Text="{Binding Path=TextSaluto}"/>
         </StackPanel>
     </Grid>
 </Window>
