@@ -16,7 +16,7 @@
             <ComboBox x:Name="cmbPersone" x:FieldModifier="private" Width="120" Margin="336,0"
                       ItemsSource="{Binding Path=Persone}" DisplayMemberPath="Cognome"
                       SelectedItem="{Binding Path=PersonaSelezionata}"/>
-            <Button Click="Button_Click">salutami</Button>
+            <Button Command="{Binding Path=SalutaCommand}">salutami</Button>
         </StackPanel>
         <StackPanel Orientation="Horizontal" Margin="0,63,16,-47" Grid.ColumnSpan="2">
             <TextBlock x:Name="txtSaluto" x:FieldModifier="private"
